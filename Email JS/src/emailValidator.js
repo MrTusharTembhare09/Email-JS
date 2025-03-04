@@ -1,8 +1,9 @@
-// Validating mandatory parts of email
+// Validating mandatory parts of email: '@' and 'bridgelabz'
 function validateEmail(email) {
-    const emailRegex = /^abc@bridgelabz\.co(\.in)?$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@bridgelabz\..+$/;
     return emailRegex.test(email);
 }
 
 // Exporting function for testing
 module.exports = validateEmail;
+

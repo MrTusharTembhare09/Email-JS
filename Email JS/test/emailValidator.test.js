@@ -1,21 +1,22 @@
 const validateEmail = require('../src/emailValidator');
 
-test('Valid Email: abc@bridgelabz.co', () => {
-    expect(validateEmail('abc@bridgelabz.co')).toBe(true);
+test('Valid Email: abc@bridgelabz.com', () => {
+    expect(validateEmail('abc@bridgelabz.com')).toBe(true);
 });
 
-test('Valid Email: abc@bridgelabz.co.in', () => {
-    expect(validateEmail('abc@bridgelabz.co.in')).toBe(true);
+test('Valid Email: xyz@bridgelabz.in', () => {
+    expect(validateEmail('xyz@bridgelabz.in')).toBe(true);
 });
 
-test('Invalid Email: xyz@bridgelabz.co', () => {
-    expect(validateEmail('xyz@bridgelabz.co')).toBe(false);
+test('Invalid Email: abc@xyz.com', () => {
+    expect(validateEmail('abc@xyz.com')).toBe(false);
 });
 
-test('Invalid Email: abc.xyz@bridgelabz.co', () => {
-    expect(validateEmail('abc.xyz@bridgelabz.co')).toBe(false);
+test('Invalid Email: abc.bridgelabz.com', () => {
+    expect(validateEmail('abc.bridgelabz.com')).toBe(false);
 });
 
-test('Invalid Email: abc@xyz.co', () => {
-    expect(validateEmail('abc@xyz.co')).toBe(false);
+test('Invalid Email: abc@bridgelabz', () => {
+    expect(validateEmail('abc@bridgelabz')).toBe(false);
 });
+
